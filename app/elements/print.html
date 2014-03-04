@@ -3,30 +3,36 @@
 <polymer-element name="polymer-print"  constructor="PrintElement" attributes="">
   <template>
     <style>
-      /* styles for the custom element itself - lowest specificity */
-      :host { display: block; }
-      /* 
-      style if an ancestor has the different class
-      :host(.different) { } 
-      */
+
+      :host {
+        display: block;
+      }
+
+      :host:hover {
+        cursor: pointer;
+      }
+      
     </style>
-    <span>I'm <b>polymer-print</b>. This is my Shadow DOM.</span>
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <g></g>
+    <path d="M8 2h16v4h-16zM30 8h-28c-1.1 0-2 0.9-2 2v10c0 1.1 0.9 2 2 2h6v8h16v-8h6c1.1 0 2-0.9 2-2v-10c0-1.1-0.9-2-2-2zM22 28h-12v-10h12v10zM30.45 11c0 0.801-0.649 1.45-1.45 1.45-0.801 0-1.45-0.649-1.45-1.45s0.649-1.45 1.45-1.45c0.801 0 1.45 0.649 1.45 1.45z" fill="#000000" />
+    </svg>
+
   </template>
   <script>
     Polymer('polymer-print', {
-      //applyAuthorStyles: true,
-      //resetStyleInheritance: true,
 
-      // element is fully prepared
-      ready: function(){ },
-      // instance of the element is created
-      created: function() { },
-      // instance was inserted into the document
-      enteredView: function() { },
-      // instance was removed from the document
-      leftView: function() { },
-      // attribute added, removed or updated
-      attributeChanged: function(attrName, oldVal, newVal) { }
+      ready: function(){
+
+        this.addEventListener('click', function() { 
+
+          window.print()
+
+        }, false);
+
+      }
+
     });
   </script>
 </polymer-element>

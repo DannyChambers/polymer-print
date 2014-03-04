@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Polymer WebApp</title>
+        <title>Polymer Print</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -17,25 +17,13 @@
 
         <!-- Place your HTML imports here -->
         <script src="bower_components/platform/platform.js"></script>
-        <link rel="import" href="elements/list.html">
-        <link rel="import" href="elements/greeting.html">
-    <link rel="import" href="elements/print.html">
+        
+        <link rel="import" href="elements/print.html">
+
     </head>
     <body>
+          
+      <polymer-print></polymer-print>
 
-        
-        <div class="hero-unit">
-          <polymer-greeting></polymer-greeting>
-          <p>You now have</p>
-          <polymer-list><polymer-list>
-        </div>
-        
-
-      <script>
-        document.addEventListener('WebComponentsReady', function() {
-            // Perform some behaviour
-        });
-      </script>
-          <polymer-print></polymer-print>
     </body>
 </html>
